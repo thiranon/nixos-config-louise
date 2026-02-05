@@ -2,8 +2,8 @@
   description = "NixOS Configuration for Louise (Lenovo V110)";
 
   inputs = {
-    # Nixpkgs source - using unstable for latest Hyprland/packages, or change to "nixos-24.11" for stability
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Nixpkgs source - using stable 25.11
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     # Home Manager
     home-manager = {
