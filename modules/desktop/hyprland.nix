@@ -4,22 +4,21 @@
   # Hyprland Config
   programs.hyprland = {
     enable = true;
-    # Optional: enable nvidia helper if needed (not likely for V110 but good for ref)
-    # enableNvidiaPatches = false; 
     xwayland.enable = true;
   };
 
   # Hint Electron apps to use Wayland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    WLR_NO_HARDWARE_CURSORS = "1"; # often needed for older hardware/VMs
+    WLR_NO_HARDWARE_CURSORS = "1"; 
   };
 
   # Essential desktop packages
   environment.systemPackages = with pkgs; [
-    hyprpaper # wallpaper
-    wofi # app launcher
-    dolphin # file manager
+    hyprpaper         # wallpaper
+    wofi              # app launcher
+    nautilus          # เปลี่ยนเป็น nautilus เพื่อให้ตรงกับ $mod + E ใน home.nix 
+    adwaita-icon-theme # เพิ่มตัวนี้เพื่อให้ Nautilus แสดงไอคอนได้ถูกต้อง
   ];
   
   # Screen sharing services (xdg-desktop-portal)

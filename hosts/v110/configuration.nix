@@ -50,7 +50,7 @@
       vim
       neofetch
       # Add configuration tool for fcitx5
-      fcitx5-configtool
+      qt6Packages.fcitx5-configtool
     ];
   };
 
