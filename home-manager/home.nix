@@ -20,8 +20,8 @@
   # Basic Git config
   programs.git = {
     enable = true;
-    userName = "louise";
-    userEmail = "louise@example.com";
+    userName = "thiarnon";
+    userEmail = "thiarnon@gmail.com";
   };
   
   # Terminals
