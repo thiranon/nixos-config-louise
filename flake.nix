@@ -2,12 +2,12 @@
   description = "NixOS Configuration for Louise (Lenovo V110)";
 
   inputs = {
-    # Nixpkgs source - using stable 25.11
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    # Nixpkgs source - using unstable for latest 2026 packages
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Home Manager
+    # Home Manager - following unstable branch
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
