@@ -7,6 +7,7 @@
     ../../modules/core/audio.nix
     ../../modules/desktop/hyprland.nix
     ../../modules/desktop/fonts.nix
+    ../../modules/desktop/gaming.nix
     ../../modules/hardware/lenovo-v110.nix
   ];
 
@@ -30,27 +31,33 @@
     LC_TIME = "th_TH.UTF-8";
   };
 
-  # Input Method (Fcitx5 for Thai)
+  # Input Method (Fcitx5 for Thai) - Enhanced for 2026
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
       fcitx5-gtk
       fcitx5-thai
+      fcitx5-mozc
+      fcitx5-configtool
     ];
   };
 
   users.users.louise = {
     isNormalUser = true;
     description = "Louise";
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "gamemode" ];
     packages = with pkgs; [
       firefox
       git
       vim
       neofetch
-      # Add configuration tool for fcitx5
-      qt6Packages.fcitx5-configtool
+      
+      # Office suite with Thai support
+      libreoffice-fresh
+      hunspell
+      hunspellDicts.th_TH
+      hunspellDicts.en_US
     ];
   };
 
