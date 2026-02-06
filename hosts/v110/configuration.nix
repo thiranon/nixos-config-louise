@@ -50,6 +50,7 @@
     packages = with pkgs; [
       firefox
       git
+      gh
       vim
       neofetch
       
